@@ -1,0 +1,54 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+@function twbs-font-path($path) {
+    @return font-path($path);
+}
+
+@function twbs-image-path($path) {
+    @return image-path($path);
+}
+
+$bootstrap-sass-asset-helper: false;
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+// Import Bootstrap for Sass
+@import "mixins";
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+// Import CSS3 Mixin
+@import "compass/css3";
+
+// Import Media Queries Mixins
+@import "ext/media-queries";
+
+// Import Utilities
+@import "block/utilities";
+
+// Import Extensions
+@import "ext/icomoon";
+//@import "ext/owl.carousel";
+//@import "ext/fancyBox/jquery.fancybox";
+
+@import "ext/slick/slick";
+
+// HEADER ===============================================================================
+
+@import "block/header";
+
+// HERO BANNER ===============================================================================
+@import "block/hero-banner";
+// MAIN ===============================================================================
+
+@import "block/nav";
+
+// MAIN ===============================================================================
+@import "block/main";
+
+// FOOTER ===============================================================================
+@import "block/footer";
+// contact page =========================================================================
+@import "pages/contact";
+@import "responsive";

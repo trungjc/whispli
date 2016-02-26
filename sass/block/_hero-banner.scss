@@ -1,0 +1,110 @@
+.slideshow {
+    position: relative;
+    .slideshow-caption {
+        position: absolute;
+        top: 50%;
+        @include transform (translateY(-50%));
+        z-index: 99;
+        width: 100%;
+        color: white;
+        text-align: center;
+        .col-md-12 {
+            width: 98%;
+            @media (min-width: 1600px) {
+                width: 97%;
+            }
+        }
+    }
+    h2 {
+
+        @include tablet {
+            font-size: 40px;
+            margin: 0 0 20px;
+        }
+    }
+    p {
+      
+        @include tablet {
+            font-size: 14px;
+            margin: 0 auto 30px;
+            width: 76%;
+        }
+    }
+    .btn {
+        border-color: transparent
+    }
+    @media (max-width: 768px) {
+        .btn {
+            font-size: 12px;
+            display: block;
+            margin: 5px auto;
+            float: none;
+            min-width: 260px;
+        }
+    }
+}
+
+.slideshow-image {
+    img {
+        width: 100%;
+    }
+    .visible-xs-block {
+        width: 100%;
+        @include mobile {
+            height: 420px;
+        }
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.bellow-hero {
+    top: -40px;
+    position: relative;
+    .col-md-6 {
+        padding:55px 40px ;
+        &:first-child {
+        	padding-left: 70px;
+        }
+    }
+    @include tablet {
+        top: -100px;
+    }
+    .container {
+        background: white;
+    }
+    .col-md-6 {
+        @include tablet {
+            padding-bottom: 165px;
+        }
+    }
+    .media-heading {
+        font-size: 14px;
+    }
+    h2 {
+        margin: 0 0 15px;
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+        margin: 0 0 15px;
+        & + .btn {
+            margin-top: 12px;
+        }
+    }
+    .media-left,
+    .media-right {
+        vertical-align: middle;
+    }
+    .media-left {
+        padding-right: 30px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .slick-dots {
+        display: none!important;
+    }
+}

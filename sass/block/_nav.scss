@@ -1,0 +1,206 @@
+// top menu desktop
+.navbar-nav {
+    & > li > .dropdown-menu {
+        background: $navbar-inverse-link-hover-bg;
+        border: none;
+        @include box-shadow(none);
+        @include border-radius(0);
+        padding: 15px 0;
+        min-width: 230px;
+        a {
+            padding: 5px 30px;
+            position: relative;
+            white-space: normal;
+            &:hover:after {
+                display: block;
+            }
+            &:after {
+                @include triangle(right, 7px, $navbar-inverse-link-hover-color);
+                content: "";
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                @include transform(translateY(-50%));
+            }
+        }
+    }
+    // language drop menu
+    & > .switch-language {
+        .dropdown-menu {
+            a {
+                padding-right: 80px;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                @include tablet {
+                    right: 40px;
+                }
+            }
+        }
+    }
+    li.active,
+    li.current {
+        a {
+            color: $navbar-inverse-link-hover-color;
+        }
+    }
+    .dropdown-menu > .active > a,
+    .dropdown-menu > .active > a:hover,
+    .dropdown-menu > .active > a:focus,
+    .dropdown-menu li a:hover {
+        background: transparent;
+        color: $navbar-inverse-link-hover-color;
+    }
+}
+
+.bs-navbar-collapse {
+    .navbar-nav {
+        @include tablet {
+            margin-left: -40px;
+        }
+    }
+    .nav > li > a {
+        padding-left: 30px;
+        padding-right: 30px;
+        @media(max-width: 800px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+// mobile navbar
+.mobile-navbar-collapse {
+    background: #051e2f;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    width: 300px;
+    z-index: 99;
+    .navbar-box {
+        height: 90%;
+        width: 100%;
+        overflow: auto;
+        position: absolute;
+    }
+    .navbar-nav {
+        margin: 0;
+        li > .dropdown-menu {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            box-shadow: none;
+            display: block;
+            float: none;
+            padding: 0;
+            margin: 0 0 0 12px;
+            position: static;
+        }
+        li a:after {
+        	display: none!important;
+        }
+        li a {
+            color: white;
+            &:hover {
+            	background: none;
+            	color: #304c8d;
+            }
+        }
+    }
+    li a {
+    	color : #e3e0e7;
+    	&:hover {
+            	color: #304c8d;
+            }
+    }
+    .second-menu  {
+    	padding:30px 0 0 16px;
+    	li a {
+    		font-size: 10px;
+    	}
+    }
+}
+
+.icon-cross {
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    padding: 20px 20px 5px 0;
+    text-align: right;
+    z-index: 9;
+}
+
+.navbar-inverse .navbar-toggle,
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    border-color: transparent;
+    background: transparent;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #051e2f;
+}
+
+// navbar right
+.navbar-nav.navbar-right {
+    position: absolute;
+    right: -2px;
+    top: 50%;
+
+    @include transform(translateY(-50%));
+    margin: 0;
+    & > li > a {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .switch-language {
+        & > a {line-height: 18px;
+            @include tablet {
+                padding-right: 43px;
+            }
+        }
+        .dropdown-menu img {
+            @include mobile {
+                right: 25px;
+            }
+        }
+    }
+    .open .dropdown-menu {
+        @media(max-width: 767px) {
+            left: auto;
+            position: absolute;
+            right: 0;
+            background: $navbar-inverse-link-hover-bg;
+        }
+    }
+    @media(max-width: 767px) {
+        right: 60px;
+        & > li {
+            &.switch-language {
+                display: inline-block;
+            }
+            display: none;
+        }
+    }
+}
+
+.navbar-toggle {
+	@include transform(translateY(-50%));
+	top: 50%;
+	margin: 0;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+	.icon-bar {
+	    height: 4px;
+	    margin-bottom: 5px;
+	    width: 25px;
+	    &:last-child {
+	    	margin: 0;
+	    }
+	}
+}

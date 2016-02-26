@@ -1,0 +1,6 @@
+.purple-overlay {
+	background: $btn-primary-bg;
+	img {
+		@include opacity(0.6);
+	}
+}

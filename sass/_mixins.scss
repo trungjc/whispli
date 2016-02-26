@@ -1,0 +1,241 @@
+@mixin element-visible($w: 100%, $h: 100%, $l:0, $t:0) {
+    width: $w;
+    height: $h;
+    display: block;
+    content: "";
+    position: absolute;
+    left: $l;
+    top: $t;
+}
+
+@mixin square($value) {
+    width: $value;
+    height: $value;
+}
+
+@mixin placeholderinput($value) {
+    &::-webkit-input-placeholder {
+        color: $value
+    }
+    &:-moz-placeholder {
+        color: $value
+    }
+    &::-moz-placeholder {
+        color: $value
+    }
+    &:-ms-input-placeholder {
+        color: $value
+    }
+}
+
+@mixin column-gap ($value) {
+    -webkit-column-gap: $value;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: $value;
+    /* Firefox */
+    column-gap: $value;
+}
+
+@mixin pointer-events() {
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    pointer-events: none;
+}
+
+@mixin appearances() {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+
+
+//Colors - Not needed for demo
+$r: #c03;
+$g: #429032;
+$b: #2963BD;
+$y: #c90;
+
+//Shapes demo starts
+@mixin rectangle($width, $height, $color) {
+    width: $width;
+    height: $height;
+    background: $color;
+}
+
+@mixin parallelogram($width, $height, $skew, $color) {
+    @include rectangle($width, $height, $color);
+    background: $color;
+    transform: skew($skew);
+}
+
+@mixin square($size, $color) {
+    @include rectangle($size, $size, $color);
+}
+
+@mixin circle($size, $color) {
+    @include square($size, $color);
+    border-radius: $size / 2;
+}
+
+@mixin oval($width, $height, $color) {
+    width: $width;
+    height: $height;
+    border-radius: #{$width} / #{$height};
+    background: $color;
+}
+
+@mixin triangle($direction, $size, $color) {
+    width: 0;
+    height: 0;
+
+    @if $direction == 'up' { 
+        border-right: $size solid transparent;
+        border-bottom: $size * 1.732 solid $color; 
+        border-left: $size solid transparent; 
+    } @else if $direction == 'down' {
+        border-top: $size * 1.732 solid $color; 
+        border-right: $size solid transparent; 
+        border-left: $size solid transparent; 
+    } @else if $direction == 'left' {
+        border-top: $size solid transparent; 
+        border-right: $size  solid $color; 
+        border-bottom: $size solid transparent; 
+    } @else if $direction == 'right' {
+        border-top: $size solid transparent; 
+        border-bottom: $size solid transparent; 
+        border-left: $size  solid $color; 
+    }
+}
+
+@mixin corner-triangle($corner, $size, $color) {
+    width: 0;
+    height: 0;
+
+    @if $corner == 'top-left' { 
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+    } @else if $corner == 'top-right' {
+        border-top: $size solid $color;
+        border-left: $size solid transparent; 
+    } @else if $corner == 'bottom-left' {
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+    } @else if $corner == 'bottom-right' {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+    }
+}
+
+@mixin trapezoid($width, $color) {
+    width: $width;
+    height: 0;
+    border-right: $width / 2 solid transparent;
+    border-bottom: $width solid $color;
+    border-left: $width / 2 solid transparent;
+    box-sizing: content-box; //If you have 'box-sizing:border-box' the trapezoid doesn't work.
+}
+
+@mixin chevron($direction, $width, $height, $skew, $color) {
+    position: relative;
+    width: $width;
+    height: $height;
+    &:before, &:after {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: $color;
+        content: '';
+    }
+    &:before {
+        left: 0;
+        transform: skew(0deg, $skew);
+    }
+    &:after {
+        right: 0;
+        transform: skew(0deg, -$skew);
+    }
+}
+
+@mixin hexagon($width, $height, $color){
+  height: $height;
+  padding: 0 $width;
+  background: $color;
+  font-size: $height / 2;
+  display: inline-block;
+  position: relative;
+  line-height: 1.8;     
+  
+  &:before, &:after {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    top: 0;
+    border-top: $height / 2 solid transparent;
+    border-bottom: $height / 2  solid transparent;
+    transform:rotateY(180deg);
+  }
+  &:before {
+    left: 100%;
+    border-right: $height / 2 solid $color;
+  }
+  &:after {
+    right: 100%;
+    border-left: $height / 2 solid $color;    
+  }
+}
+
+//Usage:
+/* .parallelogram {
+    @include parallelogram(100px, 70px, 10deg, $r );
+}
+.oval {
+    @include oval(100px, 50px, $g);
+}
+.up-triangle {
+    @include triangle(up, 60px, $b );
+}
+.down-triangle {
+    @include triangle(down, 60px, $y );
+}
+.left-triangle {
+    @include triangle(left, 60px, $r );
+}
+.right-triangle {
+    @include triangle(right, 60px, $g );
+}
+.top-left-triangle {
+    @include corner-triangle(top-left, 120px, $b );
+}
+.top-right-triangle {
+    @include corner-triangle(top-right, 120px, $y );
+}
+.bottom-left-triangle {
+    @include corner-triangle(bottom-left, 120px, $r );
+}
+.bottom-right-triangle {
+    @include corner-triangle(bottom-right, 120px, $g );
+}
+.trapezoid {
+    @include trapezoid(80px, $b );
+}
+.chevron {
+    @include chevron(down, 120px, 40px, 15deg, $y );
+}
+.hexagon {
+  @include hexagon(30px, 62px, $r);
+} */
+/* 
+.info { display: inline-block; margin-bottom: 10px; background: none; box-shadow: none; color: rgba(white,.7); white-space: nowrap; background: rgba(black,.3); }
+
+//Styling stuff not needed for demo
+.ctnr { padding: 10px 20px 20px; margin: 10px; background: rgba(black,.2); border-radius: 2px; box-shadow: inset 0 0 0 2px rgba(black,.05), 1px 1px 5px rgba(black,.2); position: relative;
+   &--hex-adjust { @extend .ctnr; padding: 45px 50px 20px; }
+   div { margin: auto; }   
+}
+.ctnr--hex-adjust .info { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); }
+.flex-ctnr { display:flex; flex-wrap:wrap; align-items:center;  }
+.tal { text-align: left; } */

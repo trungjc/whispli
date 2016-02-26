@@ -1,0 +1,104 @@
+$font-glyphicons: "Glyphicons Halflings";
+html,
+body {
+    height: 100%;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-heading;
+    line-height: 120%;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+a,
+:hover,
+:focus {
+    outline: none !important;
+}
+
+.transition-effect,
+%transition-effect {
+    @include transition(all .15s ease-in-out);
+}
+
+.container-fluid {
+    @include desktop {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.btn {
+    @include border-radius(0);
+    font-family: $font-default-bold;
+    font-size: 12px;
+    padding: 14px 24px;    
+    min-width: 240px;
+    border-width: 2px;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+    b
+    &:hover {
+        @include opacity(0.7);
+        transition: all 0.3s linear 0.1s;
+    }
+    &.btn-secondary {
+        background: #304c8d;
+    }
+    &.btn-dark {
+        border-color: #000000;
+        background: $bg-primary;
+        color: $btn-default-color;
+        //font-family: $font-default;
+    }
+    &.btn-border-dark {
+        border-color: #000000;
+        color: $text-color;
+        &:hover {
+        	  border-color: #303030;
+        }
+        [class^="icon"] {
+            color: $text-color;
+        }
+    }
+    [class^="icon"] {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+}
+
+button.btn {
+	border: none;
+}
+.col-3 {
+    @include desktop {
+        float: left;
+        width: 33.3333%
+    }
+}

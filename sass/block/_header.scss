@@ -1,0 +1,23 @@
+.header {
+    .navbar-nav {
+        li {
+            a {
+                font-family: $font-default-bold;
+                color: $navbar-inverse-color;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+.logo {
+    margin: 0;
+    max-width: 60%;
+    @include tablet {
+        left: -40px;
+        max-width: 100%;
+        position: relative;
+    }
+}
+

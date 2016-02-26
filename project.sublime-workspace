@@ -1,0 +1,463 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"mouse",
+				"mouseenter	Event"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"paddi",
+				"padding-left"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"site",
+				"site-content"
+			],
+			[
+				"root",
+				"$rootScope	AngularJS"
+			],
+			[
+				"scope",
+				"$scope	AngularJS"
+			],
+			[
+				"a",
+				"angular	AngularJS"
+			],
+			[
+				"trans",
+				"translate"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"pon",
+				"pointer-events"
+			],
+			[
+				"sty",
+				"style	Style CSS"
+			],
+			[
+				"tab",
+				"tab-pane"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"has",
+				"has-error"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"boder",
+				"border-radius"
+			],
+			[
+				"opac",
+				"opacity	opacity()"
+			],
+			[
+				"op",
+				"opacity	opacity()"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"impor",
+				"important"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: templ",
+				"Snippet: bs3-html5-template"
+			],
+			[
+				"Snippet: htm",
+				"Snippet: bs3-html5-template"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 447.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/xampp/htdocs/whispli"
+	],
+	"file_history":
+	[
+		"/C/Users/HOANGPS/Downloads/slick-1.5.9/slick-1.5.9/slick/slick.css",
+		"/D/xampp/htdocs/whispli/sass/ext/_owl.carousel.scss",
+		"/D/xampp/htdocs/angularjs/index.html",
+		"/D/xampp/htdocs/binary-coxall/html/biocity.html",
+		"/D/xampp/htdocs/binary-coxall/html/disciplines.html",
+		"/D/xampp/htdocs/binary-coxall/html/news.html",
+		"/D/xampp/htdocs/binary-coxall/html/world-map.html",
+		"/D/xampp/htdocs/binary-coxall/html/news-detail.html",
+		"/D/xampp/htdocs/binary-coxall/html/sass/block/_main.scss",
+		"/D/xampp/htdocs/angularjs/assets/js/main.js",
+		"//192.168.1.100/Shared/Projects/Whispli/whispli site v1/assets/fonts/Lulo Webfont/MyFontsWebfontsKit.css",
+		"//192.168.1.100/Shared/Projects/Whispli/whispli site v1/assets/fonts/Lulo Webfont/StartHere.html",
+		"/D/xampp/htdocs/angularjs/form.html",
+		"/D/xampp/htdocs/binary-coxall/html/enquiries.html",
+		"/D/xampp/htdocs/binary-coxall/html/contact-subcribe.html",
+		"/D/xampp/htdocs/binary-coxall/html/company-carrers.html",
+		"/D/xampp/htdocs/binary-coxall/html/sass/block/_utilities.scss",
+		"/D/xampp/htdocs/binary-coxall/html/projects.html",
+		"/D/xampp/htdocs/binary-coxall/html/project-detail.html",
+		"/D/xampp/htdocs/binary-coxall/html/index.html",
+		"/D/xampp/htdocs/binary-coxall/html/company-studios.html",
+		"/D/xampp/htdocs/binary-coxall/html/company-team-detail.html",
+		"/D/xampp/htdocs/binary-coxall/html/company-team.html",
+		"/D/xampp/htdocs/binary-coxall/html/company-careers-apply.html",
+		"/D/xampp/htdocs/binary-coxall/html/company-careers-general.html",
+		"/D/xampp/htdocs/binary-coxall/html/company-careers-intern.html",
+		"/D/xampp/htdocs/binary-coxall/html/js/main.js",
+		"/D/xampp/htdocs/binary-coxall/html/sass/block/_header.scss",
+		"/D/xampp/htdocs/binary-coxall/html/sass/_bootstrap-variables.scss",
+		"/D/xampp/htdocs/binary-coxall/html/sass/ext/_fontello.scss",
+		"/D/xampp/htdocs/binary-coxall/html/js/owl.carousel/owl.carousel.js",
+		"/D/xampp/htdocs/binary-coxall/html/js/owl.carousel/owl.carousel.min.js",
+		"/D/xampp/htdocs/pollen-sportsta/index.html",
+		"/C/Users/HOANGPS/Downloads/Nimbus-Sans-D-OT-Light_32752/fonts.css",
+		"/C/Users/HOANGPS/Downloads/nimbus-sans/fonts.css",
+		"/D/xampp/htdocs/binary-coxall/html/map-popup.html",
+		"/D/xampp/htdocs/binary-coxall/html/privacy.html",
+		"/D/xampp/htdocs/binary-coxall/html/services.html",
+		"/D/xampp/htdocs/binary-coxall/html/sitemap.html",
+		"/D/xampp/htdocs/binary-coxall/html/contact-location.html",
+		"/C/Users/HOANGPS/AppData/Local/Temp/fz3temp-1/wp-config-sample.php",
+		"/D/xampp/htdocs/binary-coxall/html/company-philosophy.html",
+		"/C/Users/HOANGPS/AppData/Local/Temp/fz3temp-1/wp-config.php",
+		"/C/Users/HOANGPS/Downloads/mapoth0.sql",
+		"/D/xampp/htdocs/binary-coxall/html/css/styles.css",
+		"/D/xampp/htdocs/angularjs/assets/js/jquery.js",
+		"/C/Users/HOANGPS/AppData/Roaming/Sublime Text 3/Packages/User/html-html5skel.sublime-snippet",
+		"/D/xampp/htdocs/binary-coxall/html/sass/_mixins.scss",
+		"/D/xampp/htdocs/binary-coxall/html/sass/styles.scss",
+		"/D/xampp/htdocs/binary-coxall/html/config.rb",
+		"/D/xampp/htdocs/binary-coxall/html/.sass-cache/bdcc539f9464736f275c4ec972d849486ee3e3a7/styles.scssc",
+		"/C/Users/HOANGPS/Downloads/jQuery-Form-Validator-master/jQuery-Form-Validator-master/formvalidator.jquery.json",
+		"/D/xampp/htdocs/binary-coxall/html/map-pop.html",
+		"/D/xampp/htdocs/binary-coxall/html/locations.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"D:\\xampp\\htdocs\\binary-coxall\\html"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"gutter-width",
+			"padding",
+			"container",
+			"fonts/",
+			"webfonts/",
+			"fonts/",
+			"12px",
+			"text-color",
+			"text",
+			"message",
+			"});\n",
+			".thumbnail-gradient",
+			".col-sm-6",
+			"select",
+			"text-indent",
+			"equalHeightColumns",
+			"ui-tab",
+			".form-group-space",
+			"box-shadow",
+			"42px;",
+			"line-height:42px;",
+			"line-height: 42px;",
+			".play-icon",
+			".thumbnail-grid",
+			"equalheight",
+			"font-family",
+			"equalHeightColumns",
+			"filter-options",
+			"thumbnail",
+			"opacity",
+			"switch-language",
+			"1044px",
+			"nav",
+			"owl-prev",
+			"hero-banner",
+			"registration",
+			"select",
+			"col-xs-6 col-sm-4",
+			".sitemap",
+			"img-gradient-box",
+			"fonts/Nimbus-Sans",
+			"fonts/nimbus",
+			"nimbus-sans",
+			"Servics",
+			"`",
+			"http://mapoftheheart.com/wp/",
+			"mapoftheheart",
+			"http",
+			"mask",
+			"fontello-icon-arrow-down",
+			"fontello-icon-arrow-down ",
+			"arrow-down",
+			"arrow-dow",
+			".select",
+			".select:after",
+			"subcribe.html",
+			"contact.html",
+			"</div",
+			"<div",
+			"popup-media",
+			"map-popup",
+			"</div",
+			"<div",
+			"article",
+			"site-content",
+			".site-content",
+			".text-right",
+			"item row",
+			"#999",
+			"12px",
+			"COUNTRY OF ORIGIN / NATIONALITY",
+			"textareaAutoHeight"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"../fonts/",
+			"fonts/LuloCleanOne-Bold/",
+			"fonts/LuloCleanOne-Bold/ ",
+			"fonts/Montserrat-Light/",
+			"col-xs-12 col-sm-4",
+			"col-xs-6 col-sm-4",
+			"",
+			"../fonts/nimbus/Nimbus-Sans",
+			"../fonts/nimbus/nimbus",
+			"Services",
+			"'",
+			"http://localhost/mapoftheheart/",
+			"fontello-icon-down-open-mini",
+			"fontello-icon-arrow-down",
+			"arrow-down",
+			"contact-subcribe.html",
+			"contact-location.html",
+			"item clearfix",
+			"item"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 331.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
