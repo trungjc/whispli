@@ -2,6 +2,9 @@ $font-glyphicons: "Glyphicons Halflings";
 html,
 body {
     height: 100%;
+    &.no-scroll-y {
+        overflow-y: hidden !important;
+    }
 }
 
 img {

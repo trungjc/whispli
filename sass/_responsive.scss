@@ -1,22 +1,5 @@
 @media (max-width:1024px) {
-    .slideshow {
-        h2 {
-            font-size: 20px;
-            line-height: 120%;
-        }
-        p {
-            font-size: 12px;
-            margin: 0 auto 10px;
-        }
-    }
-    .bellow-hero {
-        width: 96%;
-        margin: 0 auto;
-        top: -50px;
-        .container {
-            width: 100%;
-        }
-    }
+   
     h1 {
         font-size: 30px;
     }
@@ -26,21 +9,19 @@
     h3 {
         font-size: 16px;
     }
-    .bellow-hero {
-        .col-md-6:first-child {
-            padding-left: 40px;
-            padding-bottom: 40px;
-        }
-    }
     .more-item .col-md-6 {
         top: 0;
     }
+
     .bottom-feature-widget {
         margin-bottom: -40px;
         overflow: hidden;
         top: -40px;
     }
+
     .bottom-feature-widget {
+        margin-bottom: -140px;
+        top: -140px;
         .feature-post-content {
             padding: 15px 10px;
         }
@@ -51,35 +32,28 @@
             min-width: 220px;
         }
     }
-    .product-panel .col-md-6 + .col-md-6 {
-    	margin-top: 0;
+    .product-panel {
+        .container {
+            width: 100%;
+        }
+        .col-md-6 + .col-md-6 {
+            margin-top: 0;
+        }
     }
-    .product-panel .container {
-        width: 100%;
-    }
-    .bottom-feature-widget {
-    margin-bottom: -140px;
-    top: -140px;
-}
 }
 
 @media (max-width: 767px) {
-   .product-panel .container {
+    .product-panel .container {
         padding: 0 10px;
     }
+    
     .bottom-brand-widget {
         padding: 40px 0;
         .feature-logo li {
             min-height: 60px;
         }
     }
-    .bellow-hero {
-    	overflow: hidden;
-    	margin-bottom: -30px;
-        .col-md-6 {
-            padding: 20px 15px!important;
-        }
-    }
+
     .widget-footer,
     .bottom-feature-widget,
     .product-panel {
@@ -87,18 +61,11 @@
             width: 100%;
         }
     }
-    .slideshow {
-        .btn-group {
-            display: block;
-            padding: 0 44px;
-        }
-        .btn {
-            min-width: 100%;
-        }
-    }
+
     .bottom-brand-widget h2.title {
         font-size: 15px;
     }
+
     .footer {
         [class ^="footer-menu"] {
             li {
@@ -114,19 +81,20 @@
             }
         }
     }
-    
-   
 
+    .bottom-feature-widget {
+        margin-bottom: -40px;
+        top: -40px;
+    }
 }
 
 @media(max-width: 500px) {
-	 .bellow-hero{top: -40px;}
-	 .product-panel  {
-    	h2 {
-    		font-size: 14px;
-    	}
-    	.circle-icon {
-    		@include square(70px);
-    	}
+    .product-panel {
+        h2 {
+            font-size: 14px;
+        }
+        .circle-icon {
+            @include square(70px);
+        }
     }
 }

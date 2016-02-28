@@ -9,21 +9,22 @@
         color: white;
         text-align: center;
         .col-md-12 {
-            width: 98%;
+            @media (min-width: 768px) {
+                width: 98.1%;
+            }
+            
             @media (min-width: 1600px) {
-                width: 97%;
+                width: 97.3%;
             }
         }
     }
     h2 {
-
         @include tablet {
             font-size: 40px;
             margin: 0 0 20px;
         }
     }
     p {
-      
         @include tablet {
             font-size: 14px;
             margin: 0 auto 30px;
@@ -62,9 +63,9 @@
     top: -40px;
     position: relative;
     .col-md-6 {
-        padding:55px 40px ;
+        padding: 55px 40px;
         &:first-child {
-        	padding-left: 70px;
+            padding-left: 70px;
         }
     }
     @include tablet {
@@ -101,10 +102,76 @@
     }
 }
 
+@media (max-width:1024px) {
+    .slideshow {
+        h2 {
+            font-size: 20px;
+            line-height: 120%;
+        }
+        p {
+            font-size: 12px;
+            margin: 0 auto 10px;
+        }
+        .slideshow-caption .col-md-12 {
+            width: 96.88%;
+        }
+    }
+    .bellow-hero {
+        width: 96%;
+        margin: 0 auto;
+        top: -50px;
+        .container {
+            width: 100%;
+        }
+        .col-md-6:first-child {
+            padding-left: 40px;
+            padding-bottom: 40px;
+        }
+    }
+}
 
-
-@media (max-width: 768px) {
+@media (max-width: 980px) {
     .slick-dots {
         display: none!important;
+    }
+}
+
+@media (max-width: 767px) {
+    .bellow-hero {
+        overflow: hidden;
+        margin-bottom: -30px;
+        .col-md-6 {
+            padding: 20px 15px!important;
+        }
+    }
+    .slideshow {
+        .btn-group {
+            display: block;
+            padding: 0 44px;
+        }
+        .btn {
+            min-width: 100%;
+        }
+         .slideshow-caption .col-md-12 {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .bellow-hero {
+        top: -40px;
+    }
+    .slideshow {
+        .btn-group {
+            padding: 0 0px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .slideshow .btn {
+        font-size: 11px;
+        padding: 6px 24px;
     }
 }

@@ -269,7 +269,9 @@ body {
         padding: 0 18px 18px;
         .btn:not(.btn-dark) {
             color: $text-color;
-            min-width: 300px;
+            @media (min-width: 360px) {
+                min-width: 300px;
+            }
             .icon-arrow {
                 color: $text-color;
             }
@@ -380,7 +382,6 @@ body {
         margin: 20px 0;
     }
 }
-
 
 .content-page {
     padding-top: 60px;

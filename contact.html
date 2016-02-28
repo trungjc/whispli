@@ -209,7 +209,7 @@
                                         <input type="text" class="form-control" id="" placeholder="Company name*"  data-validation="required">
                                     </div>
                                     <div class="form-group">
-                                        <input type="mail" class="form-control" id="" placeholder="Email address*"  data-validation="required">
+                                        <input type="mail" class="form-control" id="" placeholder="Email address*"  data-validation="email">
                                     </div>
                                     <div class="form-group">
                                         <select class="form-control" id="current_location" data-validation="required"  data-validation="required">
@@ -242,6 +242,7 @@
                                         </textarea>
                                     </div>
                                     <button type="submit" class="btn btn-default btn-primary">SUBMIT <span class="icon-arrow"></button>
+                                    <span id="error-message-wrapper"></span>
                                 </form>
                             </div>
                             
@@ -310,11 +311,14 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
         <script type="text/javascript">
         $(document).ready(function() {
+// The element where the error messages should be placed
+var $messages = $('#error-message-wrapper');
             //call validate form
             $.validate({
-                form: '.form-validate',
-                modules: 'location, date, security, file',
-            });
+  validateOnBlur : false, // disable validation when input looses focus
+  errorMessagePosition : $messages,
+  scrollToTopOnError : false // Set this property to true if you have a long form
+});
         });
         </script>
         <script type="text/javascript" src="js/main.js"></script>

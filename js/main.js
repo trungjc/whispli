@@ -73,6 +73,7 @@ var _mcgc = {
         'use strict';
         _mcgc.widgetPostSlie.init();
         _mcgc.heroBanner.init();
+        _mcgc.mobileMenu.init();
     },
     heroBanner: {
         init: function(ele) {
@@ -94,7 +95,7 @@ var _mcgc = {
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1,
-                             dots: false
+                            dots: false
                         }
                     }
                     // You can unslick at a given breakpoint now by adding:
@@ -102,6 +103,23 @@ var _mcgc = {
                     // instead of a settings object
                 ]
             });
+        }
+    },
+    mobileMenu: {
+        init: function(ele) {
+            'use strict';
+            $('body').on(' show.bs.collapse', function() {
+                $(this).addClass('no-scroll-y')
+            })
+             $('body').on('hidden.bs.collapse', function() {
+                $(this).removeClass('no-scroll-y')
+            })
+           
+            $('.icon-cross').on('click', function() {
+
+                $('.navbar-toggle').trigger('click');
+            });
+
         }
     },
     widgetPostSlie: {
@@ -124,8 +142,7 @@ var _mcgc = {
                             slidesToScroll: 1,
                             dots: false
                         }
-                    },
-                     {
+                    }, {
                         breakpoint: 767,
                         settings: {
                             slidesToShow: 1,
@@ -144,21 +161,7 @@ var _mcgc = {
 
 $(document).ready(function() {
     'use strict';
-
-    $('.icon-cross').on('click', function() {
-        $('.navbar-toggle').trigger('click');
-    });
-    /*   $('.switch-language .dropdown-menu li').on('click',function(){
-          var img = $(this).find('img').attr('src');
-          var current = $(this).closest('.switch-language').find('.dropdown-toggle img');
-
-          console.log(current);
-          current.attr('src',img);
-
-      });
-      */
     _mcgc.init();
-
 });
 
 $(window).smartresize(function() {

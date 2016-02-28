@@ -100,27 +100,35 @@
             position: static;
         }
         li a:after {
-        	display: none!important;
+            display: none!important;
         }
         li a {
             color: white;
             &:hover {
-            	background: none;
-            	color: #304c8d;
+                background: none;
+                color: #304c8d;
+            }
+        }
+        .open {
+            .dropdown-menu > li > a {
+                color: white;
+            }
+            a:hover,a:active,a:focus {
+                background: transparent!important;
             }
         }
     }
     li a {
-    	color : #e3e0e7;
-    	&:hover {
-            	color: #304c8d;
-            }
+        color: #e3e0e7;
+        &:hover {
+            color: #304c8d;
+        }
     }
-    .second-menu  {
-    	padding:30px 0 0 16px;
-    	li a {
-    		font-size: 10px;
-    	}
+    .second-menu {
+        padding: 30px 0 0 16px;
+        li a {
+            font-size: 10px;
+        }
     }
 }
 
@@ -150,22 +158,24 @@
     position: absolute;
     right: -2px;
     top: 50%;
-
     @include transform(translateY(-50%));
     margin: 0;
     & > li > a {
-        padding-left: 25px;
-        padding-right: 25px;
+        padding: 40px 25px;
+        @include mobile {
+            padding: 10px;
+        }
     }
     .switch-language {
-        & > a {line-height: 18px;
+        & > a {
+            line-height: 18px;
             @include tablet {
                 padding-right: 43px;
             }
         }
         .dropdown-menu img {
             @include mobile {
-                right: 25px;
+                right: 10px;
             }
         }
     }
@@ -189,18 +199,18 @@
 }
 
 .navbar-toggle {
-	@include transform(translateY(-50%));
-	top: 50%;
-	margin: 0;
+    @include transform(translateY(-50%));
+    top: 50%;
+    margin: 0;
     position: absolute;
     right: 20px;
     top: 50%;
-	.icon-bar {
-	    height: 4px;
-	    margin-bottom: 5px;
-	    width: 25px;
-	    &:last-child {
-	    	margin: 0;
-	    }
-	}
+    .icon-bar {
+        height: 4px;
+        margin-bottom: 5px;
+        width: 25px;
+        &:last-child {
+            margin: 0;
+        }
+    }
 }
