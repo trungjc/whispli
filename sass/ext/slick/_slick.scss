@@ -273,7 +273,7 @@ $slick-opacity-not-active: 0.25 !default;
     width: auto;
     margin-left: -15px;
     display: none!important;
-    @include tablet {
+    @media(min-width: 900px) {
         display: block!important;
     }
     a {

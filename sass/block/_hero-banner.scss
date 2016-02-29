@@ -3,7 +3,7 @@
     .slideshow-caption {
         position: absolute;
         top: 50%;
-        @include transform (translateY(-50%));
+        @include transform (translateY(-60%));
         z-index: 99;
         width: 100%;
         color: white;
@@ -12,7 +12,6 @@
             @media (min-width: 768px) {
                 width: 98.1%;
             }
-            
             @media (min-width: 1600px) {
                 width: 97.3%;
             }
@@ -46,12 +45,13 @@
 }
 
 .slideshow-image {
-	 width: 100%;
-    img,.item {
-        width: 100%;
+    width: 100%!important;
+    img,
+    .item {
+        width: 100%!important;
     }
     .visible-xs-block {
-        width: 100%;
+        width: 100%!important;
         @include mobile {
             height: 420px;
         }
@@ -63,6 +63,7 @@
 .bellow-hero {
     top: -40px;
     position: relative;
+    z-index: 9;
     .col-md-6 {
         padding: 55px 40px;
         &:first-child {
@@ -117,6 +118,7 @@
             width: 96.88%;
         }
     }
+    
     .bellow-hero {
         width: 96%;
         margin: 0 auto;
@@ -153,7 +155,7 @@
         .btn {
             min-width: 100%;
         }
-         .slideshow-caption .col-md-12 {
+        .slideshow-caption .col-md-12 {
             width: 100%;
         }
     }

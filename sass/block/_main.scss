@@ -71,11 +71,14 @@ $spacing: 20px);
 
 body {
     overflow: auto !important;
-    padding-top: $navbar-height + 50px;
+    padding-top: $navbar-height + 20px;
+    @media (min-width: 1025px) {
+        padding-top: $navbar-height + 50px;
+    }
     position: relative;
 }
 
-.site-body {
+.site-body { 
     background: #e3e0e7;
 }
 
@@ -120,9 +123,16 @@ body {
     }
     .content-item {
         position: absolute;
-        @include transform(translateY(-50%));
+        min-height: 260px;
+        @include transform(translateY(-58%));
         top: 50%;
         z-index: 2;
+        .btn {
+            @include tablet {
+                position: absolute;
+                bottom: -40px;
+            }
+        }
         @include tablet {
             width: 60%;
         }
@@ -133,8 +143,14 @@ body {
             -50%));
         }
     }
+    .heading {
+        //min-height: 86px;
+    }
     P {
-        min-height: 110px;
+        margin-bottom: 16px;
+        @include tablet {
+            min-height: 110px;
+        }
     }
 }
 
@@ -228,6 +244,7 @@ body {
 
 //=======================product-panel=======================
 .product-panel {
+    z-index: 10;
     .col-md-6 + .col-md-6 {
         margin-top: 50px;
     }
@@ -402,3 +419,4 @@ body {
     }
     margin-bottom: 40px;
 }
+

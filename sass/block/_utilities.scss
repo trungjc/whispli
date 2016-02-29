@@ -100,9 +100,9 @@ a,
         color: $text-color;
         &:hover {
             color: white;
-        }
-        [class^="icon"] {
-            color: white;
+            [class^="icon"] {
+                color: white;
+            }
         }
     }
     [class^="icon"] {
@@ -132,7 +132,8 @@ button.btn {
 
 ///////////////////////// overwrite form-control==========================
 .form-control {
-    box-shadow: none!important;
+    
+    @include box-shadow(none !important);
     font-size: 14px;
     &.valid {
         border-width: 2px;
@@ -165,7 +166,6 @@ button.btn {
 }
 
 .select-box {
-
     select {
         @include appearances();
     }

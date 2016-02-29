@@ -72,38 +72,24 @@ var _mcgc = {
     init: function() {
         'use strict';
         _mcgc.widgetPostSlie.init();
-        _mcgc.heroBanner.init();
+        //_mcgc.heroBanner.init();
         _mcgc.mobileMenu.init();
     },
     heroBanner: {
         init: function(ele) {
             'use strict';
+            if ( $(".slideshow-image").length > 0) {
+                var opts = {
+                    fx: 'scrollDown',
+                    speed: '300',
+                    timeout: 3000,
+                    pager: '#nav',
+                    slideResize: 0,
+                    fit: 1
+                }
+                $(".slideshow-image").before('<div id="nav">').cycle(opts);
+            }
 
-            $('.slideshow-image').slick({
-                arrows: false,
-                dots: true,
-                infinite: true,
-                speed: 300,
-                 vertical: true,
-                slidesToShow: 1,
-                autoplay: true,
-                cssEase: 'linear',
-                adaptiveHeight: true,
-                responsive: [
-
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            dots: false
-                        }
-                    }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                ]
-            });
         }
     },
     mobileMenu: {
@@ -112,12 +98,11 @@ var _mcgc = {
             $('body').on(' show.bs.collapse', function() {
                 $(this).addClass('no-scroll-y')
             })
-             $('body').on('hidden.bs.collapse', function() {
+            $('body').on('hidden.bs.collapse', function() {
                 $(this).removeClass('no-scroll-y')
             })
-           
-            $('.icon-cross').on('click', function() {
 
+            $('.icon-cross').on('click', function() {
                 $('.navbar-toggle').trigger('click');
             });
 
@@ -132,6 +117,7 @@ var _mcgc = {
                 dots: true,
                 infinite: true,
                 speed: 300,
+                autoplaySpeed: 5000,
                 slidesToShow: 3,
                 adaptiveHeight: true,
                 responsive: [
@@ -163,10 +149,6 @@ var _mcgc = {
 $(document).ready(function() {
     'use strict';
     _mcgc.init();
-});
-
-$(window).smartresize(function() {
-    'use strict';
 
 });
 
