@@ -490,7 +490,11 @@
             fit: 1
         }
 
-        $(".slideshow-image").before('<div id="nav">').cycle(opts);
+
+        $(window).load(function() {
+            'use strict';
+            $(".slideshow-image").before('<div id="nav">').cycle(opts);
+        });
 
         $(window).resize(function() {
             // opts.width = $(".slideshow-image").width();

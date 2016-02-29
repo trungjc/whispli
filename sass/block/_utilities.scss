@@ -180,3 +180,9 @@ button.btn {
         @include transform(translateY(-50%));
     }
 }
+
+// remove box-shadow on ipad,iphone
+.form-control {
+    -webkit-appearance: caret;
+    -moz-appearance: caret; /* mobile firefox too! */
+}

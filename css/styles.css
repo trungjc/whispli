@@ -7577,6 +7577,12 @@ button.btn {
   transform: translateY(-50%);
 }
 
+.form-control {
+  -webkit-appearance: caret;
+  -moz-appearance: caret;
+  /* mobile firefox too! */
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?j279tv");
