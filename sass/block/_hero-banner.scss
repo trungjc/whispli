@@ -46,7 +46,8 @@
 }
 
 .slideshow-image {
-    img {
+	 width: 100%;
+    img,.item {
         width: 100%;
     }
     .visible-xs-block {

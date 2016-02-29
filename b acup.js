@@ -72,37 +72,21 @@ var _mcgc = {
     init: function() {
         'use strict';
         _mcgc.widgetPostSlie.init();
-        _mcgc.heroBanner.init();
+      //  _mcgc.heroBanner.init();
         _mcgc.mobileMenu.init();
     },
     heroBanner: {
         init: function(ele) {
             'use strict';
 
-            $('.slideshow-image').slick({
-                arrows: false,
-                dots: true,
-                infinite: true,
+            $('.slideshow-image').before('<div id="nav">').cycle({
+                fx: 'scrollDown',
                 speed: 300,
-                 vertical: true,
-                slidesToShow: 1,
-                autoplay: true,
-                cssEase: 'linear',
-                adaptiveHeight: true,
-                responsive: [
-
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            dots: false
-                        }
-                    }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                ]
+                timeout: 3000,
+                slideResize: true,
+                width: '100%',
+                fit: 1,
+                pager: '#nav'
             });
         }
     },
@@ -112,10 +96,10 @@ var _mcgc = {
             $('body').on(' show.bs.collapse', function() {
                 $(this).addClass('no-scroll-y')
             })
-             $('body').on('hidden.bs.collapse', function() {
+            $('body').on('hidden.bs.collapse', function() {
                 $(this).removeClass('no-scroll-y')
             })
-           
+
             $('.icon-cross').on('click', function() {
 
                 $('.navbar-toggle').trigger('click');
@@ -167,6 +151,13 @@ $(document).ready(function() {
 
 $(window).smartresize(function() {
     'use strict';
+    /*$('.slideshow-image').cycle('destroy');
+    $('.slideshow-image').cycle({
+        fx: 'scrollDown',
+        speed: 300,
+        timeout: 3000,
+        pager: '#nav'
+    });*/
 
 });
 

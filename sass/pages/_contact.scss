@@ -1,6 +1,61 @@
 .purple-overlay {
-	background: $btn-primary-bg;
-	img {
-		@include opacity(0.6);
-	}
+    background: $btn-primary-bg;
+    img {
+        @include opacity(0.6);
+    }
 }
+
+.intro-text {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+h2 + .intro-text {
+    margin-top: 14px;
+}
+
+.social {
+    padding: 16px 0;
+    margin: 40px 0;
+    border-top: 1px solid $hr-border;
+    border-bottom: 1px solid $hr-border;
+    li {
+        list-style: outside none none;
+        display: inline;
+        & + li {
+            margin-left: 35px;
+            color: $text-color;
+        }
+        [class^="icon-"] {
+            font-size: 24px;
+            color: $text-color;
+        }
+    }
+}
+
+.form-validate {
+    .form-group {
+        margin-bottom: 0;
+        margin-top: 12px;
+    }
+    .row {
+        margin-left: -6px;
+        margin-right: -6px;
+        .col-md-6 {
+            padding-left: 6px;
+            padding-right: 6px
+        }
+    }
+}
+
+#error-message-wrapper {
+    font-family: $font-default-bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    .form-error,
+    .valid-form {
+        margin-top: 5px;
+    }
+}
+
+

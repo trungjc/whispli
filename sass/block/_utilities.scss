@@ -48,44 +48,61 @@ a,
 }
 
 .container-fluid {
-    @include desktop {
+    @media(min-width: 1025px) {
         padding-left: 40px;
         padding-right: 40px;
     }
 }
 
+/////////////////overwrite buttons
 .btn {
     @include border-radius(0);
     font-family: $font-default-bold;
+    letter-spacing: 1px;
     font-size: 12px;
-    padding: 14px 24px;    
+    padding: 14px 24px;
     min-width: 240px;
     border-width: 2px;
     text-transform: uppercase;
     text-align: left;
     position: relative;
-    b
     &:hover {
-        @include opacity(0.7);
         transition: all 0.3s linear 0.1s;
+        color: white;
+        background: #000000;
+        border-color: #000;
+        [class^="icon"] {
+            color: white;
+        }
     }
     &.btn-secondary {
         background: #304c8d;
+        &:hover {
+            background: #000000;
+        }
     }
     &.btn-dark {
         border-color: #000000;
         background: $bg-primary;
         color: $btn-default-color;
-        //font-family: $font-default;
+        &:hover {
+            background: #304c8d;
+            border-color: transparent;
+        }
+    }
+    &.btn-primary {
+        &:hover {
+            background: #1f315b;
+        }
     }
     &.btn-border-dark {
         border-color: #000000;
         color: $text-color;
         &:hover {
-        	  border-color: #303030;
+            color: white;
         }
         [class^="icon"] {
-            color: $text-color;
+            color: white;
         }
     }
     [class^="icon"] {
@@ -97,11 +114,69 @@ a,
 }
 
 button.btn {
-	border: none;
+    border: none;
 }
+
+.col-md-6 {
+    .btn {
+        min-width: 100%;
+    }
+}
+
 .col-3 {
     @include desktop {
         float: left;
         width: 33.3333%
+    }
+}
+
+///////////////////////// overwrite form-control==========================
+.form-control {
+    box-shadow: none!important;
+    font-size: 14px;
+    &.valid {
+        border-width: 2px;
+    }
+    &:focus {
+        border-width: 2px!important;
+    }
+}
+
+.has-error {
+    .form-control {
+        border-color: $btn-primary-bg !important;
+        border-width: 2px!important;
+    }
+}
+
+.has-success {
+    .valid {
+        border-color: #3c763d;
+    }
+}
+
+.form-error {
+    & + .valid-form {
+        display: none;
+    }
+    & + .form-error {
+        display: none;
+    }
+}
+
+.select-box {
+
+    select {
+        @include appearances();
+    }
+    position: relative;
+    &:after {
+        @include triangle(down, 8px, #000);
+        content: "";
+        display: block;
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        @include transform(translateY(-50%));
     }
 }

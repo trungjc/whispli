@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.ico">
 </head>
 
-<body>
+<body class="contact-page">
     <div class="wrapper">
         <header class="header navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
@@ -73,13 +73,15 @@
                         </div>
                     </nav>
                     <!-- end mobile-navbar-collapse-->
+
                     <h1 class="logo">
                         <a href="index.html" title="logo"><img src="img/logo.png" alt="logo" width="250" height="100"/></a>
                     </h1>
                     <!-- end logo-->
                 </div>
                 <!-- end navbar-header -->
-                <!-- mobile for desktop-->
+
+                 <!-- menu for desktop-->
                 <nav role="navigation" class="navbar-collapse bs-navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li>
@@ -112,30 +114,15 @@
                             <a href="">blog</a>
                         </li>
                         <li class="visible-xs-block">
-                            <a href="#">contact</a>
+                            <a href="contact.html">contact</a>
                         </li>
                     </ul>
                     <!-- end navbar-nav-->
-                    <!--  <ul class="second-menu visible-xs-block">
-                       <li>
-                           <a href="">Privacy Policy</a>
-                       </li>
-                       <li>
-                           <a href="">Terms of service</a>
-                       </li>
-                       <li>
-                           <a href="">Informant terms</a>
-                       </li>
-                       <li>
-                           <a href="">©Fraudsec  ABN 25 605 003 825</a>
-                       </li>
-                   </ul> -->
-                    <!-- end second-menu -->
                 </nav>
                 <!-- /end navbar-collapse -->
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">contact</a>
+                        <a href="contact.html">contact</a>
                     </li>
                     <li class="switch-language ">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown"> <img width="19px" src="img/au.png" alt=""></a>
@@ -157,7 +144,7 @@
                     <div class="hero">
                         <div class="slideshow">
                             <div class="slideshow-caption">
-                                <div class="container">
+                                <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <h2>Contact Us. <br/>Don't hesitate to reach out!</h2>
@@ -176,43 +163,46 @@
                     <!-- END - hero =================================================================================== -->
                     <div class="container content-page">
                         <div class="row">
-                        <div class="col-md-5 col-xs-12 col-md-push-7">
+                            <div class="col-md-5 col-xs-12 col-md-push-7">
                                 <h2> Whispli </h2>
-                                <p>Suite 44, Jones Bay Wharf
+                                <p class="intro-text">Suite 44, Jones Bay Wharf
                                     <br/> 26 Pirrama Road,
                                     <br/> Pyrmont, NSW 2009
                                     <br/> Australia </p>
-                                    <ul class="social">
-                                        <li>
-                                            <a href=""><span class="icon-facebook"></span></a>
-                                        </li>
-                                        <li>
-                                                <a href=""><span class="icon-twitter"></span></a>
-                                        </li>
-                                        <li>
-                                                <a href=""><span class="icon-linkedin2"></span></a>
-                                        </li>
-                                    </ul>
+                                <ul class="social">
+                                    <li>
+                                        <a href=""><span class="icon-facebook"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href=""><span class="icon-twitter"></span></a>
+                                    </li>
+                                    <li>
+                                        <a href=""><span class="icon-linkedin2"></span></a>
+                                    </li>
+                                </ul>
                             </div>
-
                             <div class="col-md-6 col-xs-12 col-md-pull-5">
                                 <form action="" method="POST" role="form" class="form-validate">
-                                    <div class="form-group row">
+                                    <div class="row">
                                         <div class="col-md-6 col-xs-12">
-                                            <input type="text" class="form-control" id="" placeholder="First name*"  data-validation="required">
+                                            <div class="form-group ">
+                                                <input type="text" class="form-control" id="" placeholder="First name*" data-validation="required" data-validation-error-msg="Error.<br/> Field Entry Requiredl">
+                                            </div>
                                         </div>
                                         <div class="col-md-6 col-xs-12">
-                                            <input type="text" class="form-control" id="" placeholder="Last name*"  data-validation="required">
+                                            <div class="form-group ">
+                                                <input type="text" class="form-control" id="" placeholder="Last name*" data-validation="required" data-validation-error-msg="Error.<br/> Field Entry Requiredl">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="" placeholder="Company name*"  data-validation="required">
+                                        <input type="text" class="form-control" id="" placeholder="Company name*" data-validation="required" data-validation-error-msg="Error.<br/> Field Entry Requiredl">
                                     </div>
                                     <div class="form-group">
-                                        <input type="mail" class="form-control" id="" placeholder="Email address*"  data-validation="email">
+                                        <input type="mail" class="form-control" id="" placeholder="Email address*" data-validation="email" data-validation-error-msg="Error.<br/>You did not enter a valid e-mail">
                                     </div>
-                                    <div class="form-group">
-                                        <select class="form-control" id="current_location" data-validation="required"  data-validation="required">
+                                    <div class="form-group select-box">
+                                        <select class="form-control" id="current_location" data-validation="required" data-validation="required" data-validation-error-msg="Error.<br/> Field Entry Requiredl">
                                             <option value="" selected=""> INQUIREY TYPE: </option>
                                             <option value="1">General</option>
                                             <option value="1">Request</option>
@@ -223,8 +213,8 @@
                                             <option value="1">Product Feedback</option>
                                         </select>
                                     </div>
-                                    <div class="form-group">
-                                        <select class="form-control" id="current_location" data-validation="required"  data-validation="required">
+                                    <div class="form-group select-box">
+                                        <select class="form-control" id="current_location" data-validation="required" data-validation="required" data-validation-error-msg="Error.<br/> Field Entry Requiredl">
                                             <option value="" selected="">PRODUCTS OF INQUIREY: </option>
                                             <option value="1">Fraudsec
                                             </option>
@@ -238,14 +228,20 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <textarea data-validation="required" class="form-control materialize-textarea" placeholder="Comments">Comments
+                                        <textarea data-validation="required" class="form-control materialize-textarea" placeholder="Comments" data-validation-error-msg="Error.<br/> Field Entry Requiredl">
                                         </textarea>
                                     </div>
-                                    <button type="submit" class="btn btn-default btn-primary">SUBMIT <span class="icon-arrow"></button>
-                                    <span id="error-message-wrapper"></span>
+                                    <div class="form-group row">
+                                        <div class="col-md-6 col-xs-12">
+                                            <button type="submit" class="btn btn-default btn-primary">SUBMIT <span class="icon-arrow"></button>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12">
+                                            <span id="error-message-wrapper">
+                                    </span>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -274,7 +270,7 @@
             </ul>
             <ul class="footer-menu-secondary">
                 <li>
-                    <a href="">contact</a>
+                    <a href="contact.html">contact</a>
                 </li>
                 <li>
                     <a href="">Privacy Policy    </a>
@@ -311,14 +307,27 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
         <script type="text/javascript">
         $(document).ready(function() {
-// The element where the error messages should be placed
-var $messages = $('#error-message-wrapper');
-            //call validate form
+            // The element where the error messages should be placed
+            var $messages = $('#error-message-wrapper');
+
             $.validate({
-  validateOnBlur : false, // disable validation when input looses focus
-  errorMessagePosition : $messages,
-  scrollToTopOnError : false // Set this property to true if you have a long form
-});
+                validateOnBlur: true, // disable validation when input looses focus
+                errorMessagePosition: $messages,
+                onSuccess: function($form) {
+                    $messages.html("<div class='valid-form'>your message was sent, <br/> we'll be in touch soon</div>");
+                    return false; // Will stop the submission of the form
+                },
+                beforeValidation: function() {
+                    $messages.html("");
+                    return false; // Will stop the submission of the form
+
+                }/*,
+                onError: function() {
+                    $messages.html("<span> Error.<br/> Field Entry Required</span>");
+                    return false; // Will stop the submission of the form
+
+                }*/
+            });
         });
         </script>
         <script type="text/javascript" src="js/main.js"></script>

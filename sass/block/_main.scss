@@ -19,8 +19,8 @@
 
 @font-face {
     font-family: 'Montserrat Bold';
-    src: url('../fonts/Montserrat-Bold/Montserrat-Bold.eot');
-    src: local('☺'), url('../fonts/Montserrat-Bold/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold/Montserrat-Bold.ttf') format('truetype'), url('../fonts/Montserrat-Bold/Montserrat-Bold.svg') format('svg');
+    src: url('../fonts/Montserrat-Bold/Montserrat-SemiBold.eot');
+    src: local('☺'), url('../fonts/Montserrat-Bold/Montserrat-SemiBold.woff') format('woff'), url('../fonts/Montserrat-Bold/Montserrat-SemiBold.ttf') format('truetype'), url('../fonts/Montserrat-Bold/Montserrat-SemiBold.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -103,7 +103,9 @@ body {
     position: relative;
     background: $btn-primary-bg;
     min-height: 450px;
-    padding: 42px;
+    @include tablet {
+        padding: 42px;
+    }
     color: white;
     .img-feature {
         position: absolute;
@@ -122,10 +124,13 @@ body {
         top: 50%;
         z-index: 2;
         @include tablet {
-            width: 56%;
+            width: 60%;
         }
         @include mobile {
-            width: 80%;
+            width: 90%;
+            left: 50%;
+            @include transform(translate(-50%,
+            -50%));
         }
     }
     P {
@@ -146,6 +151,7 @@ body {
     font-size: 12px;
     font-family: $font-default-bold;
     margin: 0 0 10px;
+    letter-spacing: 1px;
 }
 
 //bottom-feature-post
@@ -276,7 +282,11 @@ body {
                 color: $text-color;
             }
             &:hover {
-                border-color: $btn-default-border;
+                border-color: #000;
+                color: white;
+                .icon-arrow {
+                    color: white;
+                }
             }
         }
     }
@@ -384,7 +394,11 @@ body {
 }
 
 .content-page {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
     margin-bottom: 40px;
 }
