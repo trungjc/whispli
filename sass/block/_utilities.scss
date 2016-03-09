@@ -120,6 +120,9 @@ button.btn {
 .col-md-6 {
     .btn {
         min-width: 100%;
+        @include desktop {
+          min-width: 70%;   
+        }
     }
 }
 

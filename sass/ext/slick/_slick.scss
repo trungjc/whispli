@@ -271,7 +271,7 @@ $slick-opacity-not-active: 0.25 !default;
     @include transform(translateX(-50%));
     z-index: 9;
     width: auto;
-    margin-left: -15px;
+    margin-left: 0;
     display: none!important;
     @media(min-width: 900px) {
         display: block!important;

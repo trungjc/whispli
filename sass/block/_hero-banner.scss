@@ -33,6 +33,16 @@
     .btn {
         border-color: transparent
     }
+    .button-container {
+        .btn-group {
+            margin-left: 22px;
+        }
+    }
+    @media (min-width: 1600px) {
+        .button-container .btn-group {
+            margin-left: 28px;
+        }
+    }
     @media (max-width: 768px) {
         .btn {
             font-size: 12px;
@@ -118,7 +128,6 @@
             width: 96.88%;
         }
     }
-    
     .bellow-hero {
         width: 96%;
         margin: 0 auto;
