@@ -121,7 +121,7 @@ button.btn {
     .btn {
         min-width: 100%;
         @include desktop {
-          min-width: 70%;   
+            min-width: 70%;
         }
     }
 }
@@ -145,10 +145,20 @@ button.btn {
     }
 }
 
+.form-validate .form-group {
+    margin-top: 13px!important;
+}
+
+.form-group {
+    .col-md-6 .btn {
+        min-width: 100%;
+    }
+}
+
 textarea.form-control {
     min-height: 120px;
     @include tablet {
-        min-height: 90px;
+        min-height: 100px;
     }
     resize: none;
 }

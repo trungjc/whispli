@@ -2,8 +2,11 @@
     position: relative;
     .slideshow-caption {
         position: absolute;
-        top: 50%;
-        @include transform (translateY(-60%));
+        top: 156px;
+        @media (min-width: 1600px) {
+            top: 50%;
+            @include transform (translateY(-60%));
+        }
         z-index: 99;
         width: 100%;
         color: white;
@@ -19,14 +22,16 @@
     }
     h2 {
         @include tablet {
-            font-size: 40px;
-            margin: 0 0 20px;
+            font-size: 54px;
+            margin: 0 0 18px;
+            line-height: 75px;
         }
     }
     p {
         @include tablet {
+            line-height: 16px;
             font-size: 14px;
-            margin: 0 auto 30px;
+            margin: 0 auto 38px;
             width: 76%;
         }
     }
@@ -56,6 +61,7 @@
 
 .slideshow-image {
     width: 100%!important;
+    max-height: 610px;
     img,
     .item {
         width: 100%!important;
@@ -81,7 +87,7 @@
         }
     }
     @include tablet {
-        top: -100px;
+        top: -67px;
     }
     .container {
         background: white;
@@ -95,22 +101,29 @@
         font-size: 14px;
     }
     h2 {
-        margin: 0 0 15px;
+        margin: 0 0 28px;
         font-size: 20px;
     }
     p {
         font-size: 14px;
         margin: 0 0 15px;
+        line-height: 20px;
         & + .btn {
             margin-top: 12px;
         }
     }
-    .media-left,
-    .media-right {
-        vertical-align: middle;
+    .media-body {
+       padding-top: 5px;
     }
     .media-left {
         padding-right: 30px;
+        span {
+            margin-left: 18px;
+            margin-top: 25px;
+            &.sprites-clock {
+                margin-top: 14px;
+            }
+        }
     }
 }
 

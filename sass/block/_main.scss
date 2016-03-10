@@ -78,7 +78,7 @@ body {
     position: relative;
 }
 
-.site-body { 
+.site-body {
     background: #e3e0e7;
 }
 
@@ -86,6 +86,44 @@ body {
     background: grey;
     .col-md-6 {
         padding: 0 80px;
+    }
+    .post-item {
+        padding: 0 0 0 40px;
+        min-height: 364px;
+        p {
+            min-height: 70px;
+        }
+        .heading {
+            margin: 0 0 16px;
+        }
+        .content-item {
+            min-height: 260px;
+            @include tablet {
+                @include transform(translateY(0));
+                top: auto;
+                bottom: 40px;
+            }
+            @include tablet {
+                width: 74%;
+            }
+            @include mobile {
+                width: 90%;
+                left: 50%;
+                @include transform(translate(-50%,
+                -50%));
+            }
+            .btn {
+                @include tablet {
+                    position: relative;
+                    bottom: auto;
+                }
+            }
+        }
+    }
+    .first-column {
+        .btn {
+            bottom: -20px!important;
+        }
     }
 }
 
@@ -134,7 +172,7 @@ body {
             }
         }
         @include tablet {
-            width: 60%;
+            width: 74%;
         }
         @include mobile {
             width: 90%;
@@ -176,8 +214,8 @@ body {
     position: relative;
     top: -20px;
     @include tablet {
-        margin-bottom: -240px;
-        top: -240px;
+        margin-bottom: -218px;
+        top: -218px;
         overflow: hidden;
     }
     .btn {
@@ -191,7 +229,7 @@ body {
         padding: 25px 0px;
         text-align: center;
         @include tablet {
-            padding: 45px 0px;
+            padding: 63px 0px 60px 0;
             text-align: left;
             padding-right: 50px;
         }
@@ -210,13 +248,14 @@ body {
         font-size: 20px;
     }
     p {
-        margin: 0 0 20px;
+        margin: 0 0 32px;
+        line-height: 18px;
     }
 }
 
 //bottom-brand-widget
 .bottom-brand-widget {
-    padding: 80px 0 40px;
+    padding: 76px 0 26px;
     text-align: center;
     h2.title {
         margin: 0 0 40px 0;
@@ -245,25 +284,39 @@ body {
 //=======================product-panel=======================
 .product-panel {
     z-index: 10;
-    .col-md-6 + .col-md-6 {
-        margin-top: 50px;
-    }
     position: relative;
     @include tablet {
-        top: -190px;
+        top: -194px;
     }
     @include mobile {
         padding-bottom: 45px;
     }
+    .col-md-6 + .col-md-6 {
+        @include desktop {
+            margin-top: 50px;
+            .product-item:first-child {
+                .description {
+                    margin-bottom: 28px;
+                }
+            }
+        }
+    }
     .name {
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         margin: 0;
+        width: 100%;
         @include transform(translate(-50%,
         -50%));
         color: white;
         text-align: center;
+        @include tablet-only {
+            font-size: 14px;
+            .circle-icon {
+                margin-bottom: 5px;
+            }
+        }
         span {
             display: block;
             margin: auto;
@@ -284,7 +337,10 @@ body {
             position: relative;
         }
         .description {
-            padding: 18px;
+            padding: 16px 18px;
+            line-height: 17px;
+            text-align: center;
+            margin-bottom: 10px;
         }
     }
     .view-detail {
@@ -403,7 +459,10 @@ body {
         padding: 0 50px;
     }
     @include tablet {
-        top: -110px;
+        top: -84px;
+    }
+    @include tablet-only {
+        top: -50px;
     }
     p {
         margin: 20px 0;
@@ -414,9 +473,31 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     @include tablet {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     margin-bottom: 40px;
 }
 
+.contact-page {
+    .slideshow {
+        h2 {
+            font-size: 40px;
+            line-height: 52px;
+        }
+    }
+    .slideshow-image,
+    .slideshow-image img {
+        max-height: 575px;
+    }
+    .slideshow-caption {
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+}
+
+.col-md-5 {
+    & > h2 {
+        margin: 0 0 20px 0;
+    }
+}

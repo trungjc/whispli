@@ -13,9 +13,10 @@
     background: $bg-primary;
     padding: 45px 0 15px;
     text-align: center;
+    a {color: #8e9498;}
     [class ^="footer-menu"] {
         padding: 0;
-        margin: 0 0 10px;
+        margin: 0 0 2px;
         li {
             display: inline;
             a {
@@ -23,11 +24,17 @@
             }
         }
     }
+    ul li:first-child a {
+        padding-left: 0;
+    }
+     ul li:last-child a {
+        padding-right: 0;
+    }
     .footer-menu-top {
         li {
             position: relative;
             & + li:after {
-                border-right: 1px solid white;
+                border-right: 1px solid #8e9498;
                 content: "";
                 display: block;
                 height: 11px;
@@ -40,27 +47,35 @@
             a {
                 font-family: $font-default-bold;
                 padding: 0 15px;letter-spacing: 1px;
+                font-size: 12px;
             }
         }
     }
     .footer-menu-secondary {
         li {
             a {
-                font-size: 10px;
-                padding: 0 22px
+                font-size: 9.97px;
+                padding: 0 20px;letter-spacing: 1px;
             }
         }
     }
 
     .footer-menu-social {
-    	 margin-top: 22px;
+    	 margin-top: 30px;
     	li {
     		a {
     			span {
     				font-size: 18px;
     			}
-    			padding: 0 10px;
+    			padding: 0 12px;
     		}
     	}
     }
+}
+
+.footer-text-top {
+    font-family: $font-heading;
+    color: white;
+    margin-bottom: 30px;
+    line-height: 18px;
 }

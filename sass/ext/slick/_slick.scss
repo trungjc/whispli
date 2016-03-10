@@ -207,7 +207,7 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-dots,
 #nav {
     position: absolute;
-    bottom: 120px;
+    bottom: 84px;
     @media(min-width: 1600px) {
         bottom: 145px;
     }
@@ -283,7 +283,7 @@ $slick-opacity-not-active: 0.25 !default;
         line-height: 0px;
         font-size: 0px;
         color: transparent;
-        margin: 0 10px;
+        margin: 0 13px;
         cursor: pointer;
         width: 10px;
         height: 10px;

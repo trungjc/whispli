@@ -34,6 +34,10 @@
             margin-top: 0;
         } */
     }
+    .slideshow .slideshow-caption {
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
 }
 
 @media (max-width: 767px) {
