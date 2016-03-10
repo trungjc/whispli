@@ -203,7 +203,7 @@ textarea.form-control {
 
 // remove box-shadow on ipad,iphone
 .form-control {
-    -webkit-appearance: caret;
-    -moz-appearance: caret;
+    //-webkit-appearance: caret;
+   // -moz-appearance: caret;
     /* mobile firefox too! */
 }

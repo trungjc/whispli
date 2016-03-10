@@ -13,7 +13,6 @@
     background: $bg-primary;
     padding: 45px 0 15px;
     text-align: center;
-    a {color: #8e9498;}
     [class ^="footer-menu"] {
         padding: 0;
         margin: 0 0 2px;
@@ -76,6 +75,7 @@
 .footer-text-top {
     font-family: $font-heading;
     color: white;
+    font-size: 14px;
     margin-bottom: 30px;
     line-height: 18px;
 }

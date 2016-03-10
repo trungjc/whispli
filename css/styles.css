@@ -7601,8 +7601,6 @@ textarea.form-control {
 }
 
 .form-control {
-  -webkit-appearance: caret;
-  -moz-appearance: caret;
   /* mobile firefox too! */
 }
 
@@ -10763,7 +10761,7 @@ textarea.form-control {
   background: transparent !important;
 }
 .mobile-navbar-collapse li a {
-  color: #e3e0e7;
+  color: #ffffff;
 }
 .mobile-navbar-collapse li a:hover {
   color: #304c8d;
@@ -11065,8 +11063,10 @@ body {
     bottom: auto;
   }
 }
-.feature-post .first-column .btn {
-  bottom: -20px !important;
+@media only screen and (min-width: 960px) {
+  .feature-post .first-column .btn {
+    bottom: -20px !important;
+  }
 }
 
 .col-3 .light-blue.post-item {
@@ -11273,6 +11273,11 @@ body {
     margin-bottom: 5px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .product-panel .name .circle-icon {
+    margin-bottom: 0px;
+  }
+}
 .product-panel .name span {
   display: block;
   margin: auto;
@@ -11291,6 +11296,21 @@ body {
 }
 .product-panel .product-item .product-item-heading {
   position: relative;
+}
+.product-panel .product-item .product-item-heading .name img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .product-panel .product-item .product-item-heading .name img {
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .product-panel .product-item .product-item-heading .name img {
+    margin-bottom: 15px;
+    width: 50px;
+  }
 }
 .product-panel .product-item .description {
   padding: 16px 18px;
@@ -11434,9 +11454,11 @@ body {
   }
 }
 
-.contact-page .slideshow h2 {
-  font-size: 40px;
-  line-height: 52px;
+@media only screen and (min-width: 768px) {
+  .contact-page .slideshow h2 {
+    font-size: 40px;
+    line-height: 52px;
+  }
 }
 .contact-page .slideshow-image,
 .contact-page .slideshow-image img {
@@ -11469,9 +11491,6 @@ body {
   background: #051e2f;
   padding: 45px 0 15px;
   text-align: center;
-}
-.footer a {
-  color: #8e9498;
 }
 .footer [class^="footer-menu"] {
   padding: 0;
@@ -11530,6 +11549,7 @@ body {
 .footer-text-top {
   font-family: "LuloCleanOne Bold", sans-serif;
   color: white;
+  font-size: 14px;
   margin-bottom: 30px;
   line-height: 18px;
 }
@@ -11639,6 +11659,20 @@ h2 + .intro-text {
   }
 }
 @media (max-width: 767px) {
+  .header .navbar-nav li ul li a {
+    font-family: "Montserrat Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+  }
+
+  .bellow-hero .col-md-6 + .col-md-6 {
+    padding-top: 0 !important;
+  }
+
+  .bellow-hero h2 {
+    font-size: 17px;
+    margin: 0 0 20px;
+  }
+
   .slideshow .button-container .btn-group {
     margin-left: 0;
   }
@@ -11688,5 +11722,26 @@ h2 + .intro-text {
   .product-panel .circle-icon {
     width: 70px;
     height: 70px;
+  }
+}
+@media (max-width: 479px) {
+  .bellow-hero .col-md-6 {
+    padding-bottom: 0l;
+  }
+
+  .bellow-hero {
+    text-align: center;
+  }
+  .bellow-hero .media-left,
+  .bellow-hero .media-body {
+    display: block;
+    float: none;
+    width: auto;
+    padding-right: 0;
+  }
+  .bellow-hero .media-left span,
+  .bellow-hero .media-body span {
+    display: block;
+    margin: 15px auto;
   }
 }

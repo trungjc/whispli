@@ -41,6 +41,17 @@
 }
 
 @media (max-width: 767px) {
+    .header .navbar-nav li ul li a {
+        font-family: $font-default;
+        font-weight: normal;
+    }
+    .bellow-hero .col-md-6 + .col-md-6 {
+        padding-top: 0!important;
+    }
+    .bellow-hero h2 {
+        font-size: 17px;
+        margin: 0 0 20px;
+    }
     .slideshow .button-container .btn-group {
         margin-left: 0;
     }
@@ -91,6 +102,25 @@
         }
         .circle-icon {
             @include square(70px);
+        }
+    }
+}
+
+@media(max-width: 479px) {
+    .bellow-hero .col-md-6 {
+        padding-bottom: 0l
+    }
+    .bellow-hero {
+        text-align: center;
+        .media-left,
+        .media-body {
+            display: block;
+            float: none;width: auto;
+            padding-right: 0;
+            span {
+                display: block;
+                margin: 15px auto;
+            }
         }
     }
 }
