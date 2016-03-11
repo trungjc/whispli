@@ -20,6 +20,10 @@
             display: inline;
             a {
                 text-transform: uppercase;
+                color: #8e9498;
+                &:hover {
+                    color: white;
+                }
             }
         }
     }

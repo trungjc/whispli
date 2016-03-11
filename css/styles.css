@@ -10303,12 +10303,6 @@ textarea.form-control {
   padding: 0;
   width: 100%;
 }
-@media (min-width: 1600px) {
-  .slick-dots,
-  #nav {
-    bottom: 145px;
-  }
-}
 .slick-dots li,
 #nav li {
   position: relative;
@@ -11063,7 +11057,7 @@ body {
     bottom: auto;
   }
 }
-@media only screen and (min-width: 960px) {
+@media (min-width: 1281px) and (max-width: 1600px) {
   .feature-post .first-column .btn {
     bottom: -20px !important;
   }
@@ -11501,6 +11495,10 @@ body {
 }
 .footer [class^="footer-menu"] li a {
   text-transform: uppercase;
+  color: #8e9498;
+}
+.footer [class^="footer-menu"] li a:hover {
+  color: white;
 }
 .footer ul li:first-child a {
   padding-left: 0;

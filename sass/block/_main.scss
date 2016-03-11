@@ -120,7 +120,7 @@ body {
             }
         }
     }
-    @include desktop {
+    @media (min-width: 1281px) and (max-width: 1600px) {
         .first-column {
             .btn {
                 bottom: -20px!important;
