@@ -10841,6 +10841,7 @@ textarea.form-control {
 .navbar-inverse {
   border: none;
   z-index: 999;
+  margin-bottom: 40px;
   -moz-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out;
@@ -10852,6 +10853,8 @@ textarea.form-control {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   border-color: rgba(0, 0, 0, 0.1);
   min-height: 80px;
+  right: auto;
+  width: 100%;
 }
 .navbar-fixed-top .logo img {
   max-height: 80px;
