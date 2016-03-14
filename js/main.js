@@ -74,11 +74,12 @@ var _mcgc = {
         _mcgc.widgetPostSlie.init();
         //_mcgc.heroBanner.init();
         _mcgc.mobileMenu.init();
+        _mcgc.fixTop.init();
     },
     heroBanner: {
         init: function(ele) {
             'use strict';
-            if ( $(".slideshow-image").length > 0) {
+            if ($(".slideshow-image").length > 0) {
                 var opts = {
                     fx: 'scrollDown',
                     speed: '300',
@@ -89,6 +90,20 @@ var _mcgc = {
                 }
                 $(".slideshow-image").before('<div id="nav">').cycle(opts);
             }
+
+        }
+    },
+    fixTop: {
+        init: function(ele) {
+            'use strict';
+            $(window).on('scroll', function() {
+                //var navHeight = $(window).height() - $('.header.navbar').offset().top;
+                if ($(window).scrollTop() > 100) {
+                    $('.header.navbar').addClass('navbar-fixed-top');
+                } else {
+                    $('.header.navbar').removeClass('navbar-fixed-top');
+                }
+            });
 
         }
     },
@@ -149,6 +164,7 @@ var _mcgc = {
 $(document).ready(function() {
     'use strict';
     _mcgc.init();
+
 
 });
 

@@ -12,7 +12,7 @@
 
 <body class="contact-page">
     <div class="wrapper">
-        <header class="header navbar navbar-inverse navbar-fixed-top">
+        <header class="header navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button data-target=".mobile-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
@@ -55,8 +55,7 @@
                                 <li>
                                     <a href="">blog</a>
                                 </li>
-                                
-                                <li >
+                                <li>
                                     <a href="contact.html">contact</a>
                                 </li>
                             </ul>
@@ -77,15 +76,13 @@
                         </div>
                     </nav>
                     <!-- end mobile-navbar-collapse-->
-
                     <h1 class="logo">
                         <a href="index.html" title="logo"><img src="img/logo.png" alt="logo" width="250" height="100"/></a>
                     </h1>
                     <!-- end logo-->
                 </div>
                 <!-- end navbar-header -->
-
-                 <!-- menu for desktop-->
+                <!-- menu for desktop-->
                 <nav role="navigation" class="navbar-collapse bs-navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li>
@@ -125,7 +122,7 @@
                 </nav>
                 <!-- /end navbar-collapse -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    <li  class="current-menu-item">
                         <a href="contact.html">contact</a>
                     </li>
                     <li class="switch-language ">
@@ -206,7 +203,7 @@
                                         <input type="mail" class="form-control" id="" placeholder="Email address*" data-validation="email" data-validation-error-msg="Error.<br/>You did not enter a valid e-mail">
                                     </div>
                                     <div class="form-group select-box">
-                                        <select class="form-control" id="current_location" data-validation="required"  data-validation-error-msg="Error.<br/> Field Entry Required">
+                                        <select class="form-control" id="current_location" data-validation="required" data-validation-error-msg="Error.<br/> Field Entry Required">
                                             <option value="" selected="">Inquiry Type*</option>
                                             <option value="1">General</option>
                                             <option value="1">Request</option>
@@ -218,7 +215,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group select-box">
-                                        <select class="form-control" id="current_location" data-validation="required"  data-validation-error-msg="Error.<br/> Field Entry Required">
+                                        <select class="form-control" id="current_location" data-validation="required" data-validation-error-msg="Error.<br/> Field Entry Required">
                                             <option value="" selected="">Products* </option>
                                             <option value="1">Fraudsec
                                             </option>
@@ -232,8 +229,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <textarea  class="form-control materialize-textarea" placeholder="Comments" data-validation="required"  >Comments
-                                        </textarea>
+                                        <textarea class="form-control materialize-textarea" placeholder="Comments" data-validation="required"></textarea>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-6 col-xs-12">
@@ -252,7 +248,7 @@
         </section>
         <!-- END - Main =================================================================================== -->
         <footer class="footer" id="footer">
-         <div class="footer-text-top">Whispli: The first global, truly independent, secure, anonymous, responsive app solution.</div>
+            <div class="footer-text-top">Whispli: The first global, truly independent, secure, anonymous, responsive app solution.</div>
             <ul class="footer-menu-top hidden-xs">
                 <li>
                     <a href="">Fraudsec</a>
@@ -300,7 +296,17 @@
                 <li>
                     <a href=""><span class="icon-linkedin2"></span></a>
                 </li>
+                <li>
+                    <a href="http://discovery.ariba.com/profile/AN01037750328">
+                        <img alt="View FRAUDSEC PTY LTD profile on Ariba Discovery" border=0 src="https://service.ariba.com/an/p/Ariba/badge_145x30.jpg">
+                    </a>
+                </li>
             </ul>
+            <div class="logo-small visible-xs-block center">
+                <a href="http://discovery.ariba.com/profile/AN01037750328">
+                    <img alt="View FRAUDSEC PTY LTD profile on Ariba Discovery" border=0 src="https://service.ariba.com/an/p/Ariba/badge_145x30.jpg">
+                </a>
+            </div>
         </footer>
         <!-- END - footer =================================================================================== -->
         </div>
@@ -309,7 +315,7 @@
         <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/slick.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
         $(document).ready(function() {
@@ -324,15 +330,16 @@
                     return false; // Will stop the submission of the form
                 },
                 beforeValidation: function() {
-                    $messages.html("");
-                    return false; // Will stop the submission of the form
+                        $messages.html("");
+                        return false; // Will stop the submission of the form
 
-                }/*,
-                onError: function() {
-                    $messages.html("<span> Error.<br/> Field Entry Required</span>");
-                    return false; // Will stop the submission of the form
+                    }
+                    /*,
+                                    onError: function() {
+                                        $messages.html("<span> Error.<br/> Field Entry Required</span>");
+                                        return false; // Will stop the submission of the form
 
-                }*/
+                                    }*/
             });
         });
         </script>

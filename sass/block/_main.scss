@@ -71,10 +71,10 @@ $spacing: 20px);
 
 body {
     overflow: auto !important;
-    padding-top: $navbar-height + 20px;
+   /*  padding-top: $navbar-height + 20px;
     @media (min-width: 1025px) {
         padding-top: $navbar-height + 50px;
-    }
+    } */
     position: relative;
 }
 
@@ -231,16 +231,14 @@ body {
         padding: 25px 0px;
         text-align: center;
         @include tablet {
-            padding: 63px 0px 60px 0;
+            padding: 63px 20px 60px 10px;
             text-align: left;
-            padding-right: 50px;
         }
     }
     .col-md-6 {
         & + .col-md-6 {
             .feature-post-content {
                 @include tablet {
-                    padding-right: 0px;
                     padding-left: 50px;
                 }
             }
@@ -481,7 +479,7 @@ body {
         top: -84px;
     }
     @include tablet-only {
-        top: -50px;
+        top: -40px;
     }
     p {
         margin: 20px 0;
