@@ -1,101 +1,40 @@
-/**
- * Created by KienNguyen on 4/2/2015.
- */
-
-//Smart Resize
-(function($, sr) {
-    var debounce = function(func, threshold, execAsap) {
-        var timeout;
-        return function debounced() {
-            var obj = this,
-                args = arguments;
-
-            function delayed() {
-                if (!execAsap)
-                    func.apply(obj, args);
-                timeout = null;
-            };
-            if (timeout)
-                clearTimeout(timeout);
-            else if (execAsap)
-                func.apply(obj, args);
-            timeout = setTimeout(delayed, threshold || 200);
-        };
-    };
-    // smartresize
-    jQuery.fn[sr] = function(fn) {
-        return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
-    };
-})(jQuery, 'smartresize');
-//=================================================================
-
-function clearText(field) {
-    if (field.defaultValue == field.value) field.value = '';
-    else if (field.value == '') field.value = field.defaultValue;
-    //<input type="text" onblur="clearText(this)" onfocus="clearText(this)" value="value"/>
-}
-
-//=================================================================
-
-function equalheight(container) {
-    var currentTallest = 0,
-        currentRowStart = 0,
-        rowDivs = new Array(),
-        $el,
-        topPosition = 0;
-    $(container).each(function() {
-        $el = $(this);
-        $($el).height('auto');
-        topPostion = $el.position().top;
-
-        if (currentRowStart != topPostion) {
-            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-                rowDivs[currentDiv].height(currentTallest);
-            }
-            rowDivs.length = 0; // empty the array
-            currentRowStart = topPostion;
-            currentTallest = $el.height();
-            rowDivs.push($el);
-        } else {
-            rowDivs.push($el);
-            currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-        }
-        for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-            rowDivs[currentDiv].height(currentTallest);
-        }
-    });
-}
-//=====================================================================
-var tablet = 768;
-
 var _mcgc = {
     init: function() {
         'use strict';
-        _mcgc.widgetPostSlie.init();
-        //_mcgc.heroBanner.init();
+        if ($('.feature-post').length) _mcgc.widgetPostSlie.init();
         _mcgc.mobileMenu.init();
-        _mcgc.fixTop.init();
+        _mcgc.topMenu.init();
     },
-    heroBanner: {
+    topMenu: {
         init: function(ele) {
             'use strict';
-            if ($(".slideshow-image").length > 0) {
-                var opts = {
-                    fx: 'scrollDown',
-                    speed: '300',
-                    timeout: 3000,
-                    pager: '#nav',
-                    slideResize: 0,
-                    fit: 1
-                }
-                $(".slideshow-image").before('<div id="nav">').cycle(opts);
-            }
+            $('.parent-menu').hover(function() {
+                    if ($('.navbar-toggle').css('display') == 'none') {
+                        $(this).addClass('active').siblings().children('.dropdown-menu').hide();
+                        var dropdownMenu = $(this).find('.dropdown-menu');
+                        dropdownMenu.fadeIn(300);
+                    }
+                },
+                function() {
+                    if ($('.navbar-toggle').css('display') == 'none') {
+                        var dropdownMenu = $(this).removeClass('active').find('.dropdown-menu');
+                        dropdownMenu.fadeOut(300);
+                    }
+                });
 
-        }
-    },
-    fixTop: {
-        init: function(ele) {
-            'use strict';
+            // Optional: Make the first link a working link! 
+            // - expected behaviour on hover menus.
+            $('.parent-menu').on('show.bs.dropdown', function() {
+                if ($('.navbar-toggle').css('display') == 'none') {
+                    var location = $(this).attr('href');
+                    if(location) {
+
+                    window.location.href = location;
+                    }
+                    return false;
+                }
+            });
+
             $(window).on('scroll', function() {
                 //var navHeight = $(window).height() - $('.header.navbar').offset().top;
                 if ($(window).scrollTop() > 100) {
@@ -161,14 +100,67 @@ var _mcgc = {
     }
 };
 
+
+function clearText(field) {
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+    //<input type="text" onblur="clearText(this)" onfocus="clearText(this)" value="value"/>
+}
+
+//Smart Resize
+(function($, sr) {
+    var debounce = function(func, threshold, execAsap) {
+        var timeout;
+        return function debounced() {
+            var obj = this,
+                args = arguments;
+
+            function delayed() {
+                if (!execAsap)
+                    func.apply(obj, args);
+                timeout = null;
+            };
+            if (timeout)
+                clearTimeout(timeout);
+            else if (execAsap)
+                func.apply(obj, args);
+            timeout = setTimeout(delayed, threshold || 200);
+        };
+    };
+    // smartresize
+    jQuery.fn[sr] = function(fn) {
+        return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
+    };
+})(jQuery, 'smartresize');
+
 $(document).ready(function() {
     'use strict';
     _mcgc.init();
 
-
 });
 
-$(window).load(function() {
-    'use strict';
-    // HERO BANNER - INIT
+$(function() {
+
+    if ($("#slideshow-image").length) {
+        var opts = {
+            fx: 'scrollDown',
+            speed: '300',
+            timeout: 10000,
+            pager: '#nav',
+            slideResize: 0,
+            fit: 1
+        };
+
+        $(window).load(function() {
+            $("#slideshow-image").before('<div id="nav">').cycle(opts);
+        });
+
+        $(window).smartresize(function() {
+            opts.height = $("#slideshow-image img:first-child").height();
+            $("#slideshow-image").cycle('destroy');
+            $("#slideshow-image").cycle(opts);
+        });
+    }
+
+
 });

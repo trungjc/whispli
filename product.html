@@ -85,8 +85,8 @@
                 <!-- menu for desktop-->
                 <nav role="navigation" class="navbar-collapse bs-navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="current-menu-item">
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">products</a>
+                        <li class="parent-menu current-menu-item">
+                            <a href="product.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">products</a>
                             <ul class="dropdown-menu sub-menu">
                                 <li>
                                     <a href="">Fraudsec</a>
@@ -125,7 +125,7 @@
                     <li>
                         <a href="contact.html">contact</a>
                     </li>
-                    <li class="switch-language ">
+                    <li class="switch-language parent-menu">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown"> <img width="19px" src="img/au.png" alt=""></a>
                         <ul class="dropdown-menu">
                             <li><a href="#" title="U.S.">U.S. <img src="img/us.png" alt="USA"></a></li>
@@ -270,39 +270,10 @@
     </div>
     <!-- END - wrapper =================================================================================== -->
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/jquery.cycle.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script>
-    $(function() {
-
-        var opts = {
-            fx: 'scrollDown',
-            speed: '300',
-            timeout: 10000,
-            pager: '#nav',
-            slideResize: 0,
-            fit: 1
-        }
-
-
-        $(window).load(function() {
-            'use strict';
-            $(".slideshow-image").before('<div id="nav">').cycle(opts);
-        });
-
-        $(window).resize(function() {
-            // opts.width = $(".slideshow-image").width();
-            opts.height = $(".slideshow-image img:first-child").height();
-            $(".slideshow-image").cycle('destroy');
-            $(".slideshow-image").cycle(opts);
-
-        });
-
-    });
-    </script>
-</body>
+   </body>
 
 </html>

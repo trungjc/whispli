@@ -27,7 +27,7 @@
                         <div class="navbar-box">
                             <ul class="nav navbar-nav">
                                 <li>
-                                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">products</a>
+                                    <a href="product.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">products</a>
                                     <ul class="dropdown-menu sub-menu">
                                         <li>
                                             <a href="">Fraudsec</a>
@@ -85,8 +85,8 @@
                 <!-- menu for desktop-->
                 <nav role="navigation" class="navbar-collapse bs-navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li>
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">products</a>
+                        <li class="parent-menu">
+                            <a href="product.html"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">products</a>
                             <ul class="dropdown-menu sub-menu">
                                 <li>
                                     <a href="">Fraudsec</a>
@@ -125,7 +125,7 @@
                     <li  class="current-menu-item">
                         <a href="contact.html">contact</a>
                     </li>
-                    <li class="switch-language ">
+                    <li class="switch-language parent-menu">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown"> <img width="19px" src="img/au.png" alt=""></a>
                         <ul class="dropdown-menu">
                             <li><a href="#" title="U.S.">U.S. <img src="img/us.png" alt="USA"></a></li>
@@ -315,7 +315,7 @@
         <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/slick.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
+        <script src="js/jquery.form-validator.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
         $(document).ready(function() {
@@ -334,12 +334,7 @@
                         return false; // Will stop the submission of the form
 
                     }
-                    /*,
-                                    onError: function() {
-                                        $messages.html("<span> Error.<br/> Field Entry Required</span>");
-                                        return false; // Will stop the submission of the form
 
-                                    }*/
             });
         });
         </script>
